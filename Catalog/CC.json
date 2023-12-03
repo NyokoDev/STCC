@@ -1,0 +1,326 @@
+{
+  "mods": [
+    {
+      "name": "Unemployment Monitor",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "RoadWearRemover",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": "3 days ago"
+      }
+    },
+    {
+      "name": "ExtendedRadio",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "CityMonitor",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Magical Hearse",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": "4 days ago"
+      }
+    },
+    {
+      "name": "Steam Privacy",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": "5 days ago"
+      }
+    },
+    {
+      "name": "LegacyFlavour",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": "6 days ago"
+      }
+    },
+    {
+      "name": "Infinite Demand Mod",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": "6 days ago"
+      }
+    },
+    {
+      "name": "VehicleCounter",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": "6 days ago"
+      }
+    },
+    {
+      "name": "OnlyAdultTrees",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": "6 days ago"
+      }
+    },
+    {
+      "name": "FirstPersonCamera",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": "6 days ago"
+      }
+    },
+    {
+      "name": "Cim Behavior Improvements",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "BetterPedestrianPathfind",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "SchoolCapacityBalancer",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "UnlockAllTiles",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "MapImageLayer",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "EconomyFixer",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "AlphaDLSSEnabler",
+      "statuses": {
+        "Stable": "Might conflict with Performance Squeezer.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "r2modman",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "BepInExPack",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "PlayerMoneyController",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Extended Road Upgrades",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Unified Icon Library",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "HistoricalStart",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "CustomVehiclePathfind",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "RentControl",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Line Tool Lite",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "MapInstaller",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Performance Squeezer",
+      "statuses": {
+        "Stable": "Might conflict with AlphaDLSSEnabler",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "AddressesCS2",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "ExtendedTransportManager",
+      "statuses": {
+        "Stable": "No issues. Update to the latest version.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "ExtraUIScreens",
+      "statuses": {
+        "Stable": "No issues. Update to the latest version.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Cali Coast",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Traffic Lights Enhancement Alpha",
+      "statuses": {
+        "Stable": "No issues. Update to the latest version.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Kexford",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Preserve Photo Mode",
+      "statuses": {
+        "Stable": "No issues.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "ExtendedHotkeys",
+      "statuses": {
+        "Stable": "Might conflict with Performance Squeezer CTRL + ALT.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "DevPlaygroundOptions",
+      "statuses": {
+        "Stable": "No issues. Update to the latest version.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "MOOB",
+      "statuses": {
+        "Stable": "No issues. Fails to import heightmaps in some cases.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "ExtendedTooltip",
+      "statuses": {
+        "Stable": "No issues. Update to latest.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "DucksInARow",
+      "statuses": {
+        "Stable": "No issues. Update to latest.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "PlayerMoneyController",
+      "statuses": {
+        "Stable": "No issues. Update to latest.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "ExtendedRoadUpgrades",
+      "statuses": {
+        "Stable": "No issues. Update to latest.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Unified Icon Library",
+      "statuses": {
+        "Stable": "No issues. Update to latest.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "STCC (This mod)",
+      "statuses": {
+        "Stable": "No issues! Report any issues or misinfo in Discord.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "HookUI",
+      "statuses": {
+        "Stable": "No issues. Update to latest.",
+        "Last Updated": ""
+      }
+    }
+  ]
+}
