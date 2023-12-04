@@ -17,8 +17,8 @@ namespace STCC
         public Form1()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile(@"Catalog\BCK.png");
-            listView1.BackgroundImage = Image.FromFile(@"Catalog\TRP.png"); // Replace with your image path
+            this.BackgroundImage = Image.FromFile(@"Catalogv1\BCK.png");
+            listView1.BackgroundImage = Image.FromFile(@"Catalogv1\TRP.png"); // Replace with your image path
             listView1.BackgroundImageLayout = ImageLayout.Stretch;
             // Adjust the image layout as needed
             this.BackgroundImageLayout = ImageLayout.Stretch;
@@ -36,7 +36,7 @@ namespace STCC
         private void Form1_Load(object sender, EventArgs e)
         {
             // Specify the path to your cc.json file
-            string filePath = @"Catalog\cc.json";
+            string filePath = @"Catalogv1\cc.json";
 
             try
             {

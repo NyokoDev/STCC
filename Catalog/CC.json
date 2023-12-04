@@ -122,7 +122,7 @@
     {
       "name": "AlphaDLSSEnabler",
       "statuses": {
-        "Stable": "Might conflict with Performance Squeezer.",
+        "Stable": "No issues. Experimental",
         "Last Updated": ""
       }
     },
@@ -199,7 +199,7 @@
     {
       "name": "Performance Squeezer",
       "statuses": {
-        "Stable": "Might conflict with AlphaDLSSEnabler",
+        "Stable": "No issues. Experimental",
         "Last Updated": ""
       }
     },
@@ -253,74 +253,88 @@
       }
     },
     {
-      "name": "ExtendedHotkeys",
+      "name": "Whiteshark Cheat Overhaul",
       "statuses": {
-        "Stable": "Might conflict with Performance Squeezer CTRL + ALT.",
+        "Stable": "No issues.",
         "Last Updated": ""
       }
     },
     {
-      "name": "DevPlaygroundOptions",
+      "name": "Dolphin Bay",
       "statuses": {
-        "Stable": "No issues. Update to the latest version.",
+        "Stable": "No issues.",
         "Last Updated": ""
       }
     },
-    {
-      "name": "MOOB",
-      "statuses": {
-        "Stable": "No issues. Fails to import heightmaps in some cases.",
-        "Last Updated": ""
+      {
+        "name": "ExtendedHotkeys",
+        "statuses": {
+          "Stable": "No issues.",
+          "Last Updated": ""
+        }
+      },
+      {
+        "name": "DevPlaygroundOptions",
+        "statuses": {
+          "Stable": "No issues. Update to the latest version.",
+          "Last Updated": ""
+        }
+      },
+      {
+        "name": "MOOB",
+        "statuses": {
+          "Stable": "No issues.",
+          "Last Updated": ""
+        }
+      },
+      {
+        "name": "ExtendedTooltip",
+        "statuses": {
+          "Stable": "No issues. Update to latest.",
+          "Last Updated": ""
+        }
+      },
+      {
+        "name": "DucksInARow",
+        "statuses": {
+          "Stable": "No issues. Update to latest.",
+          "Last Updated": ""
+        }
+      },
+      {
+        "name": "PlayerMoneyController",
+        "statuses": {
+          "Stable": "No issues. Update to latest.",
+          "Last Updated": ""
+        }
+      },
+      {
+        "name": "ExtendedRoadUpgrades",
+        "statuses": {
+          "Stable": "No issues. Update to latest.",
+          "Last Updated": ""
+        }
+      },
+      {
+        "name": "Unified Icon Library",
+        "statuses": {
+          "Stable": "No issues. Update to latest.",
+          "Last Updated": ""
+        }
+      },
+      {
+        "name": "STCC (This mod)",
+        "statuses": {
+          "Stable": "No issues! Report any issues or misinfo in Discord.",
+          "Last Updated": ""
+        }
+      },
+      {
+        "name": "HookUI",
+        "statuses": {
+          "Stable": "No issues. Update to latest.",
+          "Last Updated": ""
+        }
       }
-    },
-    {
-      "name": "ExtendedTooltip",
-      "statuses": {
-        "Stable": "No issues. Update to latest.",
-        "Last Updated": ""
-      }
-    },
-    {
-      "name": "DucksInARow",
-      "statuses": {
-        "Stable": "No issues. Update to latest.",
-        "Last Updated": ""
-      }
-    },
-    {
-      "name": "PlayerMoneyController",
-      "statuses": {
-        "Stable": "No issues. Update to latest.",
-        "Last Updated": ""
-      }
-    },
-    {
-      "name": "ExtendedRoadUpgrades",
-      "statuses": {
-        "Stable": "No issues. Update to latest.",
-        "Last Updated": ""
-      }
-    },
-    {
-      "name": "Unified Icon Library",
-      "statuses": {
-        "Stable": "No issues. Update to latest.",
-        "Last Updated": ""
-      }
-    },
-    {
-      "name": "STCC (This mod)",
-      "statuses": {
-        "Stable": "No issues! Report any issues or misinfo in Discord.",
-        "Last Updated": ""
-      }
-    },
-    {
-      "name": "HookUI",
-      "statuses": {
-        "Stable": "No issues. Update to latest.",
-        "Last Updated": ""
-      }
-    }
   ]
 }
