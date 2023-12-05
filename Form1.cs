@@ -12,6 +12,7 @@ namespace STCC
 {
     public partial class Form1 : Form
     {
+
         private List<Mod> mods = new List<Mod>(); // Initialize the mods list
 
         public Form1()
@@ -20,33 +21,19 @@ namespace STCC
             this.BackgroundImage = Image.FromFile(@"Catalogv1\BCK.png");
             listView1.BackgroundImage = Image.FromFile(@"Catalogv1\TRP.png"); // Replace with your image path
             listView1.BackgroundImageLayout = ImageLayout.Stretch;
-            // Adjust the image layout as needed
             this.BackgroundImageLayout = ImageLayout.Stretch;
-    
-            
-
-
-          
-
-
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Specify the path to your cc.json file
+
             string filePath = @"Catalogv1\cc.json";
 
             try
             {
-                // Read the JSON file content
+
                 string jsonContent = File.ReadAllText(filePath);
-
-                // Deserialize the JSON content to a root object
                 RootObject root = JsonConvert.DeserializeObject<RootObject>(jsonContent);
-
-                // Check if mods were successfully retrieved from the JSON
                 if (root != null && root.mods != null)
                 {
                     // Assign the mods list
@@ -95,7 +82,7 @@ namespace STCC
                 else
                 {
                     StatusLabel.Text = "Status information not available.";
-                   
+
                 }
             }
         }
@@ -149,5 +136,42 @@ namespace STCC
         {
             Process.Start("https://discord.gg/33RcCzm5WT");
         }
+
+        private void SupportButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SupportPanel supportForm = new SupportPanel();
+            supportForm.ShowDialog();
+            this.Dispose();
+
+        }
+
+        private void CompButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompButton_MouseHover(object sender, EventArgs e)
+        {
+            CompButton.BackgroundImage = Image.FromFile(@"UI\CompHovered.png");
+        }
+
+        private void CompButton_MouseLeave(object sender, EventArgs e)
+        {
+            CompButton.BackgroundImage = Image.FromFile(@"UI\CompNormal.png");
+        }
+
+
+        private void SupportButton_MouseLeave(object sender, EventArgs e)
+        {
+            SupportButton.BackgroundImage = Image.FromFile(@"UI\SupportNormal.png");
+        }
+
+        private void SupportButton_MouseHover(object sender, EventArgs e)
+        {
+            SupportButton.BackgroundImage = Image.FromFile(@"UI\SupportHovered.png");
+        }
+
     }
 }
+        
