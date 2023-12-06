@@ -290,7 +290,7 @@
       {
         "name": "ExtendedTooltip",
         "statuses": {
-          "Stable": "No issues. Update to latest.",
+          "Stable": "Requires HookUI. No issues reported.",
           "Last Updated": ""
         }
       },
@@ -329,12 +329,33 @@
           "Last Updated": ""
         }
       },
-      {
-        "name": "HookUI",
-        "statuses": {
-          "Stable": "No issues. Update to latest.",
-          "Last Updated": ""
-        }
+    {
+      "name": "HookUI",
+      "statuses": {
+        "Stable": "No issues. Update to latest.",
+        "Last Updated": ""
       }
+    },
+    {
+      "name": "UnlimitedElevatedRoad",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "KexfordTemperate",
+      "statuses": {
+        "Stable": "No issues reported.",
+        "Last Updated": ""
+      }
+    },
+    {
+      "name": "Population Rebalance",
+      "statuses": {
+        "Stable": "No issues. Update to latest.",
+        "Last Updated": ""
+      }
+    }
   ]
 }

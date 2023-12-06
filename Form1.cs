@@ -26,18 +26,20 @@ namespace STCC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             string filePath = @"Catalogv1\cc.json";
 
             try
             {
-
                 string jsonContent = File.ReadAllText(filePath);
                 RootObject root = JsonConvert.DeserializeObject<RootObject>(jsonContent);
+
                 if (root != null && root.mods != null)
                 {
                     // Assign the mods list
                     mods = root.mods;
+
+                    // Set the listView1 to display as a list
+                    listView1.View = View.List;
 
                     // Add mods' names to listView1
                     foreach (var mod in mods)
@@ -45,6 +47,10 @@ namespace STCC
                         ListViewItem item = new ListViewItem(mod.name);
                         listView1.Items.Add(item);
                     }
+
+                    // Sort the items alphabetically
+                    listView1.Sorting = SortOrder.Ascending;
+                    listView1.Sort();
                 }
                 else
                 {
@@ -57,6 +63,7 @@ namespace STCC
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
+
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
