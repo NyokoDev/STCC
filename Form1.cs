@@ -5,15 +5,20 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
+using System.Net.Http;
+using HtmlAgilityPack;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Linq;
 
 namespace STCC
 {
     public partial class Form1 : Form
     {
 
-        private List<Mod> mods = new List<Mod>(); // Initialize the mods list
+        private Dictionary<string, string> modsData;
 
         public Form1()
         {
@@ -26,78 +31,123 @@ namespace STCC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string filePath = @"Catalogv1\cc.json";
-
             try
             {
-                string jsonContent = File.ReadAllText(filePath);
-                RootObject root = JsonConvert.DeserializeObject<RootObject>(jsonContent);
+                string url = "https://stcc-developer-control.onrender.com";
 
-                if (root != null && root.mods != null)
+                modsData = GetModsFromHTMLUrl(url);
+
+                if (modsData != null)
                 {
-                    // Assign the mods list
-                    mods = root.mods;
+                    modsData = modsData.OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
 
-                    // Set the listView1 to display as a list
                     listView1.View = View.List;
+                    listView1.Columns.Add("Mod Name").Width = 150;
 
-                    // Add mods' names to listView1
-                    foreach (var mod in mods)
+                    foreach (var mod in modsData.Keys)
                     {
-                        ListViewItem item = new ListViewItem(mod.name);
+                        ListViewItem item = new ListViewItem(mod);
                         listView1.Items.Add(item);
                     }
-
-                    // Sort the items alphabetically
-                    listView1.Sorting = SortOrder.Ascending;
-                    listView1.Sort();
+                    listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                 }
                 else
                 {
-                    MessageBox.Show("No mods found in the JSON file.");
+                    MessageBox.Show("No mods found.");
                 }
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that might occur during file reading or JSON deserialization
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
 
+        private Dictionary<string, string> GetModsFromHTMLUrl(string url)
+        {
+            var mods = new Dictionary<string, string>();
+
+            HtmlWeb web = new HtmlWeb();
+            HtmlAgilityPack.HtmlDocument doc = web.Load(url);
+
+            HtmlNodeCollection rows = doc.DocumentNode.SelectNodes("//table//tr");
+
+            if (rows != null)
+            {
+                foreach (HtmlNode row in rows)
+                {
+                    HtmlNodeCollection cols = row.SelectNodes("td");
+                    if (cols != null && cols.Count == 2)
+                    {
+                        string modName = cols[0].InnerText.Trim();
+                        string stability = cols[1].InnerText.Trim();
+
+                        // Check if the key already exists before adding
+                        if (!mods.ContainsKey(modName))
+                        {
+                            mods.Add(modName, stability);
+                        }
+                        else
+                        {
+                            // Handle duplicates if needed
+                            // For example, modify the modName slightly to make it unique
+                            string modifiedModName = modName + "_Duplicate";
+                            mods.Add(modifiedModName, stability);
+                        }
+                    }
+                }
+            }
+
+            return mods;
+        }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Check if any item is selected in listView1
             if (listView1.SelectedItems.Count > 0)
             {
-                // Get the selected item and update ModLabel with the mod name
-                string selectedModName = listView1.SelectedItems[0].Text;
-                ModLabel.Text = selectedModName;
+                string selectedMod = listView1.SelectedItems[0].Text;
+                ModLabel.Text = $"{selectedMod}";
 
-                // Find the selected mod object from the mods list
-                Mod selectedMod = mods.Find(mod => mod.name == selectedModName);
-
-                // Update StatusLabel with the mod status
-                if (selectedMod != null && selectedMod.statuses != null)
+                if (modsData.TryGetValue(selectedMod, out string stability))
                 {
-                    string stableInfo = $"Stability: {selectedMod.statuses.Stable}";
-                    StatusLabel.Text = stableInfo;
-
-                    string lastUpdated = selectedMod.statuses.LastUpdated;
-
+                    StatusLabel.Text = $"Stability: {stability}";
                 }
                 else
                 {
                     StatusLabel.Text = "Status information not available.";
-
                 }
             }
         }
 
+        private Dictionary<string, string> GetModsFromHTMLFile(string filePath)
+        {
+            HtmlWeb web = new HtmlWeb();
+            HtmlAgilityPack.HtmlDocument doc = web.Load(filePath);
+
+            var mods = new Dictionary<string, string>();
+
+            HtmlNodeCollection rows = doc.DocumentNode.SelectNodes("//table//tr");
+
+            if (rows != null)
+            {
+                foreach (HtmlNode row in rows)
+                {
+                    HtmlNodeCollection cols = row.SelectNodes("td");
+                    if (cols != null && cols.Count == 2)
+                    {
+                        string modName = cols[0].InnerText.Trim();
+                        string stability = cols[1].InnerText.Trim();
+                        mods.Add(modName, stability);
+                    }
+                }
+            }
+
+            return mods;
+        
+}
 
 
-        // Classes representing the JSON structure
-        public class Statuses
+// Classes representing the JSON structure
+public class Statuses
         {
             public string Stable { get; set; }
             public string LastUpdated { get; set; }
